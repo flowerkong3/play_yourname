@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="resources/js/ui.js"></script>
+		<link rel="stylesheet" href="resources/css/ui.css">
+		<title>너의 이름은?</title>
+	</head>
+	<body>
+		<section class="sec-intro section section01">
+			<h2 class="blind">intro : 이름을 맞추는 메인 페이지</h2>
+			<div class="inner">
+				<div class="name-wrap">
+					<h3 class="title">Your Name is?</h3>
+					<input type="text" id="name" placeholder="Please enter your name" autofocus>
+				</div>
+				<button onclick="resultBtn()" value="버튼">button</button>
+				<button onclick="resetBtn()" value="초기화" class="reset">reset</button>
+				<p id="resultText">hint : MangDeng </p>
+				<div class="dog" id="dog">
+					<img src="resources/img/dog1.png" alt="dog1" class="dog1">
+					<img src="resources/img/dog2.png" alt="dog2" class="dog2" style="display: none;">
+				</div>
+			</div>
+		</section>
+		<!-- 꼬리 흔드는 섹션 -->
+		<section class="sec-tail section section02">
+			<h2 class="blind">section02 : 꼬리를 흔들어요</h2>
+			<div class="inner">
+				<p>my dog<br> wags its tail</p>
+				<div class="shake-dog">
+					<div class="body"><img src="resources/img/shake_dog.png" alt="꼬리 흔드는 강아지"></div class="body">
+					<div class="bg"><img src="resources/img/bg.png" alt=""></div>
+				</div>
+				
+			</div>
+		</section>
+		<section class="sec-tail section section03">
+			<h2 class="blind">section03 : 점프 점프</h2>
+			<div class="inner">
+				<p>my dog<br> jump! jump!</p>
+				<div class="shake-dog">
+					<div class="body jump"><img src="resources/img/jump_dog.png" alt="꼬리 흔드는 강아지"></div class="body">
+					<div class="bg"><img src="resources/img/bg.png" alt=""></div>
+				</div>
+				
+			</div>
+		</section>
+
+	</body>
+</html>

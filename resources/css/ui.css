@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/* Reset CSS */
+* {
+	box-sizing: border-box; margin: 0; padding:0;
+}
+body {
+	font-family: 'Quicksand', sans-serif;
+}
+ul {list-style:none; margin:0; padding:0;}
+a {text-decoration:none}
+input,button {
+	border: none; padding: 10px 20px; font-size: 20px;
+}
+button {cursor:pointer;}
+
+/* 공통 CSS*/
+.section {height:100vh; width:100%; /* text-align:center; */ margin:auto; display:flex; flex-direction: column; align-items: center; justify-content:center}
+.inner {position:relative; padding:0 20px; margin:auto; max-width:1000px; width:100%; }
+.blind {position:absolute; left:-9999px; top:-9999px; text-indent:-9999px}
+
+
+
+/* ! Section-Intro */
+.sec-intro .title {font-size:80px; margin:0 0 30px; }
+
+.sec-intro .dog {position:absolute; right:0; top:100px; margin: auto; width:300px; height: 300px; font-size:50px;}
+.sec-intro .dog img {width:100%;}
+
+.sec-intro input[type="text"]{width:300px; padding:20px 0; text-indent:10px; background: transparent; border-bottom:1px solid darksalmon; }
+.sec-intro input::placeholder {color:#222;}
+.sec-intro button {margin:20px 0 0; width:140px; background: darksalmon; border: none; border-radius: 5px; color:#fefefe}
+.sec-intro button.reset {background:#222}
+
+/* * Name Hint */
+.sec-intro #resultText {margin:30px 0 0; font-size: 20px; font-family: 'Pacifico', cursive;}
+
+/* ! Section-Tail */
+.sec-tail {background:#fefefe;}
+.sec-tail .inner {padding:0 120px; height:100%; max-width:800px;position:relative}
+/* 배경 꾸밈주는 라인 */
+.sec-tail .inner::before {content: ''; position: absolute; top: 10%; left: 50%; transform: translateX(-50%); width: 118%; height: 78%; /* border: 4px dashed #fff; */ border-radius: 31px;}
+.sec-tail p {position:absolute; top:21%; font-size:34px; text-align:left; font-weight:bold; text-transform: capitalize; } 
+.sec-tail p {animation:fadeInText 3s ease-in-out forwards; opacity:0;}
+@keyframes fadeInText {
+	0% {margin-top:-100px}
+	100% {margin-top:0}
+}
+
+.sec-tail .shake-dog {position:absolute; top:25%; right:0; width:500px; height:500px}
+.sec-tail .shake-dog .body {z-index:1; position:absolute; right:90px; top:120px;}
+.sec-tail .shake-dog .body:before {animation:tail ease-in-out 1.5s infinite; z-index: -1; content: ''; position: absolute; bottom: 85px; right: 40px; width: 57px; height: 79px; background: url(../img/tail.png);}
+
+.sec-tail .shake-dog .bg {position:absolute; left:0; top:0;}
+
+/* 섹션2 활성화 - on 클랙스 추가 */
+.sec-tail {display:none;}
+.sec-tail.on {display: block;}
+
+/* ! Section-Jump */
+.sec-tail .shake-dog .jump {animation:jump ease-in-out 1.5s infinite;} 
+
+
+.section01 {background:#fefefe}
+.section02 {background:#f0f2e3}
+.section03 {background:#e6ecc9}
+
+/* * 애니메이션 */
+/* 꼬리 흔들기 */
+@keyframes tail{
+	/* 0% {transform: rotate(0deg);}
+	50% {transform: rotate(-180deg); right:200px}
+	100% {transform: rotate(0deg); } */
+	0% {}
+	50% {right:200px; transform: scaleX(-1);}
+	100% {}
+}
+
+/* 점프 */
+@keyframes jump{
+	/* 0% {transform: rotate(0deg);}
+	50% {transform: rotate(-180deg); right:200px}
+	100% {transform: rotate(0deg); } */
+	0% {top:120px}
+	50% {top:50px}
+	100% {top:120px}
+}
+
+
+
+
+/* 반응형 */
+@media screen and (max-width:768px){
+	.inner {text-align:center}
+	.sec-intro .title {
+		font-size:60px; 
+	}
+	.sec-intro input[type="text"] {text-align:center}
+	.sec-intro .dog {position:relative}
+
+	.sec-tail p {text-align:center; width:100%}
+	.sec-tail p, 
+	.sec-tail .shake-dog 
+	{left:50%; transform:translateX(-50%)}
+
+}
