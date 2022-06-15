@@ -97,10 +97,10 @@ button {cursor:pointer;}
 @media screen and (max-width:768px){
 	.inner {text-align:center}
 	.sec-intro .title {
-		font-size:60px; 
+		font-size:3rem; 
 	}
 	.sec-intro input[type="text"] {text-align:center}
-	.sec-intro .dog {position:relative}
+	.sec-intro .dog {position:relative; top:50px}
 
 	.sec-tail p {text-align:center; width:100%}
 	.sec-tail p, 
