@@ -110,4 +110,5 @@ button {cursor:pointer;}
 @media screen and (max-width:480px){
 	html {font-size:6px;}
 	.sec-intro .title {font-size: 5rem;}
+	.sec-tail .inner {overflow:hidden;}
 }
