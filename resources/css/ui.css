@@ -44,7 +44,7 @@ button {cursor:pointer;}
 .sec-tail {background:#fefefe;}
 .sec-tail .inner {padding:0 120px; height:100%; max-width:800px;position:relative}
 /* 배경 꾸밈주는 라인 */
-.sec-tail .inner::before {content: ''; position: absolute; top: 10%; left: 50%; transform: translateX(-50%); width: 118%; height: 78%; /* border: 4px dashed #fff; */ border-radius: 31px;}
+.sec-tail .inner::before {content: ''; position: absolute; top: 10%; left: 50%; transform: translateX(-50%); width: 100%; height: 78%; /* border: 4px dashed #fff; */ border-radius: 31px;}
 .sec-tail p {position:absolute; top:21%; font-size:34px; text-align:left; font-weight:bold; text-transform: capitalize; } 
 .sec-tail p {animation:fadeInText 3s ease-in-out forwards; opacity:0;}
 @keyframes fadeInText {
