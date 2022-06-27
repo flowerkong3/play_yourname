@@ -13,7 +13,7 @@ function resultBtn() {
 		
 		name = document.getElementById("name").value; //input값 넣기
 		//이름이 '망댕'이라면
-		if (name === "망댕") { 
+		if (name === "MangDeng") { 
 			text = "good!";
 			section.style.backgroundColor = "#fef7e0"; //배경색 나타남
 			dog2.style.display = "block"; //dog2 나타남
